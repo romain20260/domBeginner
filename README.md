@@ -1,5 +1,5 @@
 # domBeginner
-série d'exercice pour le Dom 
+série d'exercice pour le Dom.
 
 ## prérequis
 
