@@ -7,31 +7,46 @@
 </head>
 
 <body style="background-color: green">
+    <!-- chercher le node body plus spcefiquement le valeur de son style 
+    qui lui est attribuer ici dans la balise(html(background-color:green)) -->
     <header>
-
         <p>objectifs : </p>
         <ul>
-            <li>aller chercher les attribut d'un node</li>
+            <li>aller chercher l'attribut d'un node</li>
             <li>utilisé cette data dynamiquement</li>
         </ul>
     </header>
-    <h1>l'attribut style de body = </h1>
-<!-- exercice:
--vous devez ecrire du JS dans le document actuel 
--allez chercher attribut style 
--ensuite l'ajoutez à la balise H1 
--le resultat escompte que la balise h1 indique la valeur de son style de facon dynamique
--soit en remplacant le texte du h1 soit en l'ajoutant sorte de contenation avec += -->
-<!-- ATTENTION piege pour allez cherchez body s'est un balise particulier pour le DOM comme form
-https://www.w3schools.com/jsref/prop_doc_body.asp -->
+    <h1 id="one">l'attribut style de body = </h1>
+    <!-- rajoutez la data qu vous avez chercher en amont (le style de body)
+    DANS la balise h1 id one (par remplacement ou par rajout)
+    le resultat escompter est l' affichage comme ceci
+    : l'attribut style de body = background-color: green
+    OU
+    : background-color: green -->
+<!--    
+                                                                exercice Astuce:
+                                                                chercher par dans la doc comment rajouter du texte (utiliser +=)
+         ASTUCE  PART  ONE             ========>>>>>>           https://www.geeksforgeeks.org/how-to-append-html-code-to-a-div-using-javascript/#:~:text=To%20append%20using%20the%20innerHTML,the%20%2B%3D%20operator%20on%20innerHTML.
+                                                                ATTENTION piege pour allez cherchez body s'est un balise particulier pour le DOM comme form
+                                                                https://www.w3schools.com/jsref/prop_doc_body.asp 
+-->
     <h1>la couleur de fond de la page est : </h1>
-<!-- exercice : deuxieme partie 
---trouver un methode qui permet d'aller chercher juste la valeur de background-color est l'inserer de le h1 
---resultat escompte la couleur de fond de la page est : green
---astuce passer par l'interface style de l'element cibler' https://www.w3schools.com/jsref/dom_obj_style.asp -->
+    <!-- rajoutez la data de la couleur du backgroun-color 
+    mais uniquement le nom de la couleur 
+    DANS la balise si dessus
+    le resultat escompter est l' affichage comme ceci
+    : la couleur de fond de la page est : green
+    OU
+    : green --> 
+<!-- 
+                                                                  exercice Astuce:
+         ASTUCE PART TWO           ========>>>>>>                 passer par l'interface style de l'element cibler' 
+                                                                  https://www.w3schools.com/jsref/dom_obj_style.asp 
+-->
 <script>
-  
-    
+
+
+
 </script>
     
 </body>
