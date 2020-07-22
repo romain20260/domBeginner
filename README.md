@@ -1,3 +1,85 @@
+# git_worflow 
+
+## faire son propre depot avec fork et upstream (forker et lier votre depot au mien)
+
+  - first : fork le depot de base (le github actuel) (url https://github.com/romain20260/domBeginner)
+  
+  - second : depuis votre espace prendre l'url de votre propre depo de domBeginner soit: https://github.com/__"votreNomUserGithub"__/domBeginner
+  
+  - third : clone votre depot pour faire un cpie de travail en local (terminal)
+  
+    - command dans votre terminal (console)
+    - dans le path de votre desktop par exemple 
+    - git clone https://github.com/__"votreNomUserGithub"__/domBeginner (url doit correspondre au path de votre depot)
+    
+  - fourth : check les remotes 
+  
+    -toujours dans la console
+    - git remote -v (vous indique les remotes de votre copie de travail (les liens des actions fetch (pull) et push pointant vers url de votre depot)
+    (origin est part convention le nom du remote à utiliser pour pointer vers le liens)
+    (d'ou le git pull origin master pour sync le depot distant)
+    
+  - fifth : creer un lien depuis votre copie de travail (donc le local) vers le depot https://github.com/romain20260/domBeginner donc celui-ci
+  
+    - toujour dans le terminal 
+    - git remote add upstream https://github.com/romain20260/domBeginner
+    (cela va rajouter deux remote name upstream (ici aussi s'est un convention), un fetch et un push 
+    - verifier avec git remote -v
+    
+  - sixth : enlever le remote du upstream push (car cela pointe le push sur mon depot) par précaution 
+   
+   - toujours dans le terminal
+   - git remote set-url --push upstream DISABLED 
+   (cela set la commande push de upstream vers DISABLE qui n'est pas un url)
+   (si lors de la creation du remote add vous avez rentrer un autre nom veillez a upstream de la commande par le nom de la remote que vous avez creer)
+   - verifier avec gt remote -v
+   
+votre propre copie de travail du depot de domBeginner (dans le local) et liée avec mon depot pour etre pull grace a upstream
+
+## comment pull mon depot sur votre local avant d update votre depot distant
+
+  - firts : recuperer mes commit from mon depot et les fusionner sur votre copie de travail (local)
+  
+    - dans votre terminal(console) dans le dossier du depot local (dans la branch master)
+    - git pull upstream master 
+    (va chercher dans mon depot les commits de master et puis les mergent a votre branch actuel (veillez a ce que ce soit master)
+    (ceci va mettre a jour le master de votre local)
+    
+  - second : push ses modification sur votre depot distant (soit origin)
+  
+    - git push origin master 
+    (ainsi les modification seront pousser vers origin (votre depot distant))
+    
+bien-sur tout ca vous pouvez le faire sur n'importe quelle branche mais en general ont le fais sur master puis tirer un branche ou rebase sa branche de dev (histoire de laissez les master propre)
+
+## rebase sa branche de travail si master est up-to-date
+
+  - firts : verifier que master (local) soit à jour
+    - avec git pull upstream master 
+    (le terminal vous informe que vous etes à jour ou effectue le pull dans le cas echeant)
+  
+  - si vous etes pas a jour :
+    - depuis master faites : 
+    git pull upstream master
+    - puis pousser les modif sur votre depot distant(origin) : 
+    git push origin master 
+    - puis depuis votre branch de travil (local) :
+    git rebase master
+    (voila votre branch de travail est à jour)
+    
+    
+## bonne pratique git et github
+ 
+ - veillez à travail sur un fork (au besoin pull request la base "upstream")
+ - veillez à travaillez sur des branche up-to-date (à jour) sur votre master lui meme up-to-date par rapport a upstream
+ - ne pas travaillez sur master directement
+ - veillez mettre a jours votre master depot local au debut
+ - commit avant de cloturer le travail (voir un push sur origin pour plus de securité)
+ - veillez a verifier avec un rebase avant tout push
+    
+  
+
+
 # domBeginner
 série d'exercice pour le Dom 
 
