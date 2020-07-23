@@ -1,4 +1,4 @@
-# git_worflow 
+# git_worflow.
 
 ## faire son propre depot avec fork et upstream (forker et lier votre depot au mien)
 
